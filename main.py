@@ -16,5 +16,10 @@ def getdosen():
     hobi = ['membaca', 'jalan-jalan', 'nonton']
     return render_template('dosen.html', hobi=hobi)
 
+# routing flask dinamis
+@app.route('/nama/<string:nama>')
+def getnama(nama):
+    return "nama anda adalah {}".format(nama)
+
 if __name__ == '__main__':
     app.run(debug=True)
